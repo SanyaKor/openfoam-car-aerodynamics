@@ -26,8 +26,12 @@ The GIFs below are example outputs showing how `car_les` behaves.
 > [!IMPORTANT]
 > If you change geometry scale, update `scale` in `updateCaseParams.sh` and run the script again to recalculate case parameters.
 
-Velocity (`U`)
-![](../docs/animations/u_les.gif)
+<p align="center"><strong>Velocity (<code>U</code>)</strong></p>
+<p align="center">
+  <img src="../docs/animations/u_les.gif" alt="Velocity U" width="900">
+</p>
 
-Pressure (`p`)
-![](../docs/animations/p_les.gif)
+<p align="center"><strong>Pressure (<code>p</code>)</strong></p>
+<p align="center">
+  <img src="../docs/animations/p_les.gif" alt="Pressure p" width="900">
+</p>

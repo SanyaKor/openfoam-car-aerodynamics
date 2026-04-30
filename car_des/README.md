@@ -25,14 +25,22 @@ The GIFs below are example outputs showing how `car_des` behaves.
 > [!IMPORTANT]
 > If you change geometry scale, update `scale` in `updateCaseParams.sh` and run the script again to recalculate case parameters.
 
-Velocity (`U`)
-![](../docs/animations/u_des.gif)
+<p align="center"><strong>Velocity (<code>U</code>)</strong></p>
+<p align="center">
+  <img src="../docs/animations/u_des.gif" alt="Velocity U" width="900">
+</p>
 
-Pressure (`p`)
-![](../docs/animations/p_des.gif)
+<p align="center"><strong>Pressure (<code>p</code>)</strong></p>
+<p align="center">
+  <img src="../docs/animations/p_des.gif" alt="Pressure p" width="900">
+</p>
 
-Turbulence Kinetic Energy (`k`)
-![](../docs/animations/k_des.gif)
+<p align="center"><strong>Turbulence Kinetic Energy (<code>k</code>)</strong></p>
+<p align="center">
+  <img src="../docs/animations/k_des.gif" alt="Turbulence Kinetic Energy k" width="900">
+</p>
 
-Turbulent Viscosity (`nut`)
-![](../docs/animations/nut_des.gif)
+<p align="center"><strong>Turbulent Viscosity (<code>nut</code>)</strong></p>
+<p align="center">
+  <img src="../docs/animations/nut_des.gif" alt="Turbulent Viscosity nut" width="900">
+</p>
