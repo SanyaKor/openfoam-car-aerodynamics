@@ -14,6 +14,7 @@ General workflow (mesh/run/parallel) is documented in the repository root `READM
 - Simulation type: RAS
 - Turbulence model: `kOmegaSST`
 - Parameter update script (run inside this folder): `./updateCaseParams.sh`
+- Geometry source and download: `constant/geometry/README.md`
 
 > [!NOTE]
 > If you change geometry scale, update `scale` in `updateCaseParams.sh` and run the script again to recalculate case parameters.

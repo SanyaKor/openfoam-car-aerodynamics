@@ -14,6 +14,7 @@ General workflow (mesh/run/parallel) is documented in the repository root `READM
 - Simulation type: LES
 - Turbulence model: `WALE`
 - Parameter update script (run inside this folder): `./updateCaseParams.sh`
+- Geometry source and download: `constant/geometry/README.md`
 
 ## Example Results
 
