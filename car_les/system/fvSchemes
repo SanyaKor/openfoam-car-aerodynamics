@@ -28,9 +28,8 @@ divSchemes
 {
     default                         none;
 
-    // Stable LES start
-    div(phi,U)                      bounded Gauss upwind;
-
+    //div(phi,U)                      bounded Gauss upwind;
+    div(phi,U)      		    bounded Gauss linearUpwindV grad(U);
     div((nuEff*dev2(T(grad(U)))))   Gauss linear;
 }
 
