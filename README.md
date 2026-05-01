@@ -12,7 +12,6 @@ This repository contains three external car aerodynamics cases:
 ## Requirements
 
 - OpenFOAM 12
-- STL geometry in each case: `constant/triSurface/Car.stl`
 
 ## Quick Start (Any Case)
 
