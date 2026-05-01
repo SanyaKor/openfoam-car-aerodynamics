@@ -42,7 +42,6 @@ chmod +x updateCaseParams.sh
 
 ```bash
 blockMesh
-surfaceFeatureExtract
 snappyHexMesh -overwrite
 checkMesh
 ```
@@ -59,9 +58,20 @@ simpleFoam
 
 ## Parallel Run (Optional)
 
+### Parallel Meshing
+
+```bash
+decomposePar
+mpirun -np 16 snappyHexMesh -parallel -overwrite
+reconstructPar
+checkMesh
+```
+
 ### Solver Run
 
 ```bash
+cp 0/U.orig 0/U
+potentialFoam
 decomposePar
 
 # car_des / car_les
@@ -73,13 +83,18 @@ mpirun -np 16 simpleFoam -parallel
 reconstructPar
 ```
 
-### Parallel Meshing
+## Logging
+
+Save solver output to a log file:
 
 ```bash
-decomposePar
-mpirun -np 16 snappyHexMesh -parallel -overwrite
-reconstructParMesh -constant
-checkMesh
+# single-core run
+simpleFoam &> log.simpleFoam
+foamLog log.simpleFoam
+
+# parallel run
+mpirun -np 16 pimpleFoam -parallel &> log.pimpleFoam
+foamLog log.pimpleFoam
 ```
 
 ## Notes
@@ -93,7 +108,7 @@ checkMesh
 > `surfaceConvert input.stl output.stl -scale 0.001`
 
 > [!IMPORTANT]
-> After changing geometry scale, update `scale` in `updateCaseParams.sh` and run the script again to recalculate consistent `Re`, `Aref`, `lRef`, and turbulence parameters.
+> After changing geometry scale, update `scale` in `updateCaseParams.sh` and run the script again to recalculate consistent `magUInf`, `Aref`, `lRef`, and turbulence parameters.
 
 > [!NOTE]
 > Case-specific details are documented in local `README.md` files inside each case folder.
